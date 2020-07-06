@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.example'
+version = '1.0.0'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation enforcedPlatform('com.example:platform-project:1.0.0')
+    implementation 'com.example:project-b:1.0.0'
+}

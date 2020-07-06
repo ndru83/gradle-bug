@@ -1,0 +1,18 @@
+plugins {
+    id "com.gradle.enterprise" version "3.3.4"
+}
+
+gradleEnterprise {
+    buildScan {
+        obfuscation {
+            username { 'Obfuscated' }
+            hostname { 'Obfuscated' }
+            ipAddresses { [ 'Obfuscated' ] }
+        }
+    }
+}
+
+rootProject.name = 'project-a'
+
+includeBuild 'platform-project'
+includeBuild 'project-b'

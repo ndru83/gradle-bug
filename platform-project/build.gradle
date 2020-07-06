@@ -1,0 +1,17 @@
+plugins {
+    id 'java-platform'
+}
+
+group = 'com.example'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    constraints {
+	    // Deliberately unsatisfiable constraint with version range
+        api 'org.apache.commons:commons-lang3:[99,)'
+    }
+}
